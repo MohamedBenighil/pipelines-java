@@ -20,6 +20,8 @@ steps:
       # Write your commands here
       
       echo 'Hello world'
+    bashEnvValue: 
+      JAVA_HOME_8_X64=/usr/bin/java
 
 - task: Maven@3
   inputs:
