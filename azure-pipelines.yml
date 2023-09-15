@@ -18,11 +18,12 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
-      echo 'Hello world'
-    bashEnvValue: 
-      JAVA_HOME_8_X64=/usr/bin/java
-
+        which java
+        java -version
+        echo JAVA_HOME_8_x86=$JAVA_HOME_8_x86
+        echo JAVA_HOME=$JAVA_HOME
+        javac
+      displayName: 'Show Release Number'
 
 - task: JavaToolInstaller@0
   inputs:
