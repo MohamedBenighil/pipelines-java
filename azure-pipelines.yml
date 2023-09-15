@@ -13,22 +13,18 @@ pool:
 
 
 steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-        which java
-        java -version
-        echo JAVA_HOME_8_x86=$JAVA_HOME_8_x86
-        echo JAVA_HOME=$JAVA_HOME
-        javac
-      displayName: 'Show Release Number'
+- script: |
+    which java
+    java -version
+    echo JAVA_HOME_8_x86=$JAVA_HOME_8_x86
+    echo JAVA_HOME=$JAVA_HOME
+    javac
+  displayName: 'Show Release Number'
 
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '1.8'
-    jdkArchitectureOption: 'x64'
+    versionSpec: '8'
+    jdkArchitectureOption: 'x86'
     jdkSourceOption: 'PreInstalled'
 - task: Maven@3
   inputs:
