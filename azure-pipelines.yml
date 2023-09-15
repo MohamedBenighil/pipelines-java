@@ -16,7 +16,7 @@ steps:
 - script: |
     which java
     java -version
-    export JAVA_HOME_8_x86=/usr/bin/java
+    export PATH=$PATH:usr/bin/java
     java -version
     echo JAVA_HOME_8_x86=$JAVA_HOME_8_x86
     echo JAVA_HOME=$JAVA_HOME
